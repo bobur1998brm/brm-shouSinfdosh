@@ -5,13 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main">
         <h1 class="title"><span>B R M</span> Shou</h1>
-        <h2 class="win"></h2>
-        <h2 class="lose"></h2>
+        <div class="count">
+                <div class="count__container">
+                    <p class="lose__count">0</p>
+                    <p style="color: red;" >losed</p>
+                </div>
+            <div>
+                <h2 class="win"></h2>
+                <h2 class="lose"></h2>
+            </div>
+            <div class="count__container">
+                <p class="win__count">0</p>
+                <p >win</p>
+            </div>
+        </div>
 
         <div class="container">
             <div class="box">
@@ -28,6 +41,16 @@
             <button id="btn">Start</button>
         </div>
         <audio id="audio"  src=""></audio>
+
+        <div class="menu__container">
+            <i id="menu" class="fas fa-ellipsis-h"></i>
+        </div>
+        <div class="menu__panelConatiner">
+            <div class="menu__panel">
+                <button id="clear">reset</button>
+                <button id="showAlert">help</button>
+            </div>
+        </div>
     </div>
     <div class="alert">
         <h4 >Bu o'yinda uchta bir xil rasm chiqsa yutgan bulasiz</h4><br>

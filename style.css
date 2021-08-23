@@ -10,6 +10,7 @@
     padding-top: 50px;
     /* background: radial-gradient(circle, rgb(166, 91, 196), dodgerblue, rgb(35, 35, 209)); */
     background: #d6e1e6;
+    position: relative;
 }
 .mainLose{
     animation: lose .25s 8 forwards;
@@ -49,10 +50,29 @@
 }   
 .title span{
     color: #6CE5E8;
+    -webkit-text-stroke: 1px #0c898b;
+}
+.count{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+.lose__count{
+    color: red;
+    font-weight: 700;
+    font-size: 38px;
+}
+.win__count{
+    color: gold;
+    font-weight: 700;
+    font-size: 38px;
+    -webkit-text-stroke: 1px rgb(158, 135, 5);
 }
 .win, .lose{
     text-align: center;
-    margin: 30px 0;
     font-size: 50px;
 }
 
@@ -124,6 +144,7 @@
     letter-spacing: 1px;
     transition: 0.3s;
     text-align: center;
+    transform: scale(0);
 }
 .ok__btn{
     color: red;
@@ -142,12 +163,65 @@
     opacity: .7;
     cursor: pointer;
 }
+.menu__container{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    position: absolute;
+    top: 0;
+    left: 15%;
+}
+#menu{
+    font-size: 22px;
+    color: #555;
+}
+#menu:hover{
+    color: #111;
+    cursor: pointer;
+}
+.menu__panelConatiner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    top: 0;
+    display: none;
+}
+.menu__panel{
+    position: absolute;
+    top: 55px;
+    right: 16%;
+    width: 150px;
+    background-color: rgb(86, 127, 160);
+    display: flex;
+    flex-direction: column;
+}
+.menu__panel > button{
+    padding: 12px 0;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.menu__panel > button:first-child{
+    border-bottom: 1px solid #eee;
+}
+.menu__panel > button:hover{
+    background-color: rgb(64, 110, 148);
+    cursor: pointer;
+}
 
 @media screen and (max-width:650px) {
     .container{
         width: 98%;
         grid-gap: 5px;
-        margin-top: 35%;
+        margin-top: 15%;
+    }
+    .count{
+        width: 100%;
+        padding: 16px;
     }
     .box{
         height: 120px;
@@ -156,6 +230,13 @@
     .win, .lose{
         margin: 15px 0;
         font-size: 30px;
+    }
+    .menu__container{
+        width: 90%;
+        left: 5%;
+    }
+    .menu__panel{
+        right: 9%;
     }
 }
 
