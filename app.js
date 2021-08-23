@@ -9,7 +9,7 @@ let alert = document.querySelector('.alert');
 let image = document.querySelectorAll('.image');
 
 let imgArrey = ['img/bobur.jpg', 'img/bekzod.jpg', 'img/rafiq.jpg', 'img/muxriddin.jpg','img/jobir.jpg']
-let textArray = ['O\'xshamadi', 'Yana bir marta qani', 'Eeeeeeeehh', 'Etibor bilan qani', 'Odam o\'xshab do\'stim']
+let textArray = ['O\'xshamadi', 'Yana bir marta qani', 'Eeeeeeeehh', 'Etibor bilan qani', 'Odamga o\'xshab do\'stim']
 
 okBtn.addEventListener('click',()=>{
     alert.style.transform = 'scale(0)'
